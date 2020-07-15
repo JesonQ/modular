@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="text/javascript" src="module1.js"></script>
+  <script type="text/javascript">
+    // window.myModule = 9
+    myModule.foo()
+    myModule.bar()
+    // myModule.otherFun()  //报错：myModule.otherFun is not a function
+    console.log(myModule.data) //undefined 不能访问模块内部数据
+    myModule.data = 'xxxx' //并不是修改的模块内部的data
+    myModule.foo() //未受影响
+
+  </script>
+</body>
+
+</html>
